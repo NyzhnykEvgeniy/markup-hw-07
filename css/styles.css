@@ -263,7 +263,7 @@ span {
   text-transform: uppercase;
   color: #ffffff;
 }
-/* Наща команда */
+/* Наша команда */
 
 .team {
   background: #f5f4fa;
@@ -271,6 +271,18 @@ span {
   padding-right: 215px;
   padding-bottom: 94px;
 }
+
+.team__heading {
+  margin: 0px;
+  padding-top: 94px;
+  padding-bottom: 50px;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
 .team-members {
   margin: 0px;
   padding: 0px;
@@ -278,11 +290,6 @@ span {
   width: 1170px;
   height: 428px;
 }
-/* .name {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-} */
 
 .team-members__list {
   margin-left: auto;
@@ -295,16 +302,7 @@ span {
 .team-members__list:not(:last-child) {
   margin-right: 30px;
 }
-.team__heading {
-  margin: 0px;
-  padding-top: 94px;
-  padding-bottom: 50px;
-  color: var(--text-color);
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-}
+
 .team-members__name {
   margin: 0pc;
   padding-top: 30px;
@@ -708,7 +706,7 @@ span {
   border: none;
 }
 
-/* Checkbox */
+/* Checkbox Модальное окно*/
 
 .modal__field {
   display: flex;
@@ -743,10 +741,11 @@ span {
   background-origin: border-box;
 }
 
-/* Наши работы */
+/* Портфолио
+Наши работы */
 
 .main {
-  margin: 0px auto;
+  margin: auto;
   width: 1170px;
 }
 
@@ -760,35 +759,39 @@ span {
   height: 54px;
   display: flex;
 }
-.first {
-  width: 73px;
-  height: 38px;
+.filter__button {
+  /* width: 73px;
+  height: 38px; */
   padding: 6px 22px;
 }
-.second {
+/* .second {
   width: 128px;
   height: 38px;
+  padding: 6px 22px;
 }
 .third {
   width: 145px;
   height: 38px;
+  padding: 6px 22px;
 }
 .fourth {
   width: 103px;
   height: 38px;
+  padding: 6px 22px;
 }
 .fifth {
   width: 130px;
   height: 38px;
-}
+  padding: 6px 22px;
+} */
 
 /* кнопки работ */
 
-.filter .filter-button:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.button {
+.filter__button {
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -807,8 +810,8 @@ span {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover,
-.button:focus {
+.filter__button:hover,
+.filter__button:focus {
   color: #ffffff;
   background: var(--background-color-blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -817,16 +820,15 @@ span {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-images {
-  list-style: none;
 
+.product-set {
   padding-left: 0px;
   display: flex;
   flex-wrap: wrap;
   margin: 0pc;
   margin-bottom: 94px;
 }
-.list-images li {
+.product-set__item {
   width: 370px;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
@@ -838,13 +840,13 @@ span {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-sizing 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-images li:nth-child(3n) {
+.product-set__item:nth-child(3n) {
   margin-right: 0px;
 }
-.list-images li:nth-last-child(-n + 3) {
+.product-set__item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
-.list-images h3 {
+.product-set__heading {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -854,21 +856,19 @@ span {
   margin: 0px;
   padding: 20px 24px 4px 24px;
 }
-.list-images p {
+.product-set__description {
   margin: 0px;
   padding: 0px 24px 20px 24px;
   color: #757575;
-}
-.list p {
   font-size: 16px;
   line-height: 1.87;
 }
-.link-overlay {
+.product-set__link-overlay {
   text-decoration: none;
 }
 
 /* Синий оверлей */
-.list-images li:hover {
+.product-set__item:hover {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
@@ -879,11 +879,11 @@ span {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay {
+.product-set__overlay {
   position: relative;
   overflow: hidden;
 }
-.overlay .text-overlay {
+.product-set__text-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -899,8 +899,8 @@ span {
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
 }
-.link-overlay:hover .text-overlay,
-.link-overlay:focus .text-overlay {
+.product-set__link-overlay:hover .product-set__text-overlay,
+.product-set__link-overlay:focus .product-set__text-overlay {
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
