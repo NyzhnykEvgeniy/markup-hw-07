@@ -11,7 +11,7 @@
   letter-spacing: 0.03em;
   margin-left: auto;
   margin-right: auto;
-  width: 1600px;
+  max-width: 1600px;
 }
 .list,
 .features,
@@ -22,7 +22,6 @@
 }
 /* Навигация */
 .navigation {
-  width: 1600px;
   height: 80px;
   border-bottom: 1px;
   border-bottom-style: solid;
@@ -126,10 +125,11 @@ span {
 /* Заказ услуг */
 
 .main-title {
-  max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   background-size: contain;
   background-color: #c4c4c4;
@@ -140,8 +140,11 @@ span {
   background-size: cover;
 }
 .title {
-  padding: 199px 447px 30px 457px;
+  max-width: 696px;
   margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -395,14 +398,8 @@ span {
 
 /* футер */
 
-/* .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-} */
 .footer {
   padding-top: 60px;
-  width: 1600px;
   height: 252px;
   background: #2f303a;
   color: var(--background-color-site);
@@ -606,7 +603,7 @@ span {
 .modal-close:hover svg {
   fill: #2196f3;
 }
-.leave-data {
+.modal__leave-data {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -616,37 +613,37 @@ span {
   margin: 0;
   margin-bottom: 12px;
 }
-.forma {
+.modal__forma {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.forma-li {
+.modal__forma-item {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 20px;
 }
-.forma-li:not(:last-child) {
+.modal__forma-item:not(:last-child) {
   margin-bottom: 10px;
 }
-.icon-forma {
+.modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input:focus + .icon-forma {
+.modal__input:focus + .modal__icon {
   fill: #2196f3;
 }
-.forma-li label {
+.modal__label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
 }
-.forma-li input {
+.modal__input {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -654,14 +651,14 @@ span {
   padding-left: 42px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input:focus {
+.modal__input:focus {
   outline: none;
   border: 1px solid #2196f3;
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
 }
-.data textarea {
+.modal__data textarea {
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -670,13 +667,13 @@ span {
   resize: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input::placeholder {
+.modal__input::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.check {
+.modal__check {
   display: flex;
   justify-content: center;
   font-size: 14px;
@@ -684,11 +681,11 @@ span {
   color: #757575;
   margin-top: 20px;
 }
-.contract-link {
+.modal__agreement {
   margin-left: 4px;
   color: var(--background-color-blue);
 }
-.send {
+.modal__send {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -713,12 +710,12 @@ span {
 
 /* Checkbox */
 
-.field {
+.modal__field {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.checkbox {
+.modal__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -732,14 +729,14 @@ span {
   line-height: 1.71;
   color: #757575;
 }
-.icon-svg {
+.modal__icon-check {
   width: 16px;
   height: 15px;
   margin-right: 7px;
   border: 2px solid#212121;
   border-radius: 3px;
 }
-.checkbox:checked + .icon-svg {
+.modal__checkbox:checked + .modal__icon-check {
   border-color: transparent;
   background-image: url('../images/svg/checkbox1.svg');
   background-size: contain;
